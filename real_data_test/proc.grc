@@ -1,0 +1,1118 @@
+options:
+  parameters:
+    author: dinanbai
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: proc
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: measure data proc
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: bit_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '1023000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [504, 64.0]
+    rotation: 0
+    state: enabled
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: bit_rate*sps
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [368, 48.0]
+    rotation: 0
+    state: enabled
+- name: sps
+  id: variable
+  parameters:
+    comment: ''
+    value: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [632, 56.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_mag_1
+  id: blocks_complex_to_mag
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2616, 888.0]
+    rotation: 0
+    state: disabled
+- name: blocks_file_source_0
+  id: blocks_file_source
+  parameters:
+    affinity: ''
+    alias: ''
+    begin_tag: pmt.PMT_NIL
+    comment: ''
+    file: \\engin-storage.m.storage.umich.edu\engin-storage\dinanbai\windat.v2\Desktop\GPS_Rx\data\1207GPSCollecting1707
+    length: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    repeat: 'True'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [992, 460.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_1
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: sps*1023
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 872.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_1_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: sps*1023
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 952.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_1_0_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: sps*1023
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1112.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_1_0_1
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: sps*1023
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1272.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_1_0_1_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: sps*1023
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1352.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_1_1
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: sps*1023
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1032.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_1_2
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: sps*1023
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1192.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_2
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: 1023*sps
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 912.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_2_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: 1023*sps
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 992.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_2_0_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: 1023*sps
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1232.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_2_1
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: 1023*sps
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1072.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_2_1_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: 1023*sps
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1312.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_2_1_0_0
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: 1023*sps
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1392.0]
+    rotation: 0
+    state: enabled
+- name: blocks_vector_to_stream_2_2
+  id: blocks_vector_to_stream
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: 1023*sps
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [976, 1152.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_1
+  id: epy_block
+  parameters:
+    _source_code: "\"\"\"\nEmbedded Python Blocks:\n\nEach time this file is saved,\
+      \ GRC will instantiate the first class it finds\nto get ports and parameters\
+      \ of your block. The arguments to __init__  will\nbe the parameters. All of\
+      \ them are required to have default values!\n\"\"\"\n\nimport numpy as np\n\
+      from gnuradio import gr\nimport pmt\n\n\nclass blk(gr.basic_block):  # other\
+      \ base classes are basic_block, decim_block, interp_block\n    \"\"\"Embedded\
+      \ Python Block example - a simple multiply const\"\"\"\n\n    def __init__(self,sps=4,\
+      \ fine_search_loopN = 6):  # only default arguments here\n        \"\"\"arguments\
+      \ to this function show up as parameters in GRC\"\"\"\n        gr.basic_block.__init__(\n\
+      \            self,\n            name='Central_Processor',   # will show up in\
+      \ GRC\n            in_sig=[np.complex64]*7,\n            out_sig=None\n    \
+      \    )\n        # if an attribute with the same name as a parameter is found,\n\
+      \        # a callback is registered (properties work, too).\n        self.sps\
+      \ = sps\n        self.N_channel = 7\n        self.fine_search_loopN = fine_search_loopN\n\
+      \        self.fd_init = 0\n        self.del_f_init = 500\n        self.fdp =\
+      \ 0        # updated central fd \n        self.del_fp = 500    # updated search\
+      \ resolution \n        self.coarse_search_fd = [self.fd_init,\n            \
+      \                     self.fd_init + self.N_channel*self.del_f_init,\n     \
+      \                            -self.fd_init - self.N_channel*self.del_f_init,\n\
+      \                                 self.fd_init + 2*self.N_channel*self.del_f_init,\n\
+      \                                 -self.fd_init - 2*self.N_channel*self.del_f_init\n\
+      \                                 ]\n        self.PRN_search_list = [0]\n  \
+      \      self.coarse_search_step = 0\n        self.PRN_code_len = 1023\n     \
+      \   self.PRN_ref = [1]*7\n        self.flag = 0         # system flag\n    \
+      \    self.search_state = 0 # 0: coarse search; 1: fine search\n        self.search_loopN\
+      \ = 0 # counting how many loops are used in the DDM search\n        self.mode\
+      \ = 0         # 0: cold start 1: tracking mode\n\n        self.track_PRN = 0\n\
+      \        self.track_delay = 0\n        self.track_doppler = 0\n        self.track_phase\
+      \ = 0\n        self.PRN_peak_SNR = 0\n        self.track_del_doppler = 10\n\n\
+      \        self.track_loopN = 0\n\n        \n        self.message_port_register_out(pmt.intern(\"\
+      request_data\"))\n        self.message_port_register_out(pmt.intern(\"freqlist_update\"\
+      ))\n        self.message_port_register_out(pmt.intern(\"PRN_ref_update\"))\n\
+      \        self.message_port_register_out(pmt.intern(\"mode_update\"))\n\n\n \
+      \   def general_work(self, input_items, output_items):\n\n        chunk_size\
+      \ = self.sps * self.PRN_code_len  # Number of samples to process per call\n\n\
+      \        if self.mode == 0: # Cold start mode\n\n            if self.flag ==\
+      \ 1:\n                self.consume_each(len(input_items[0]))\n             \
+      \   return 0\n            \n            if len(input_items[0]) < chunk_size:\n\
+      \                return 0\n            freq_search_list = self.fdp + (np.array(range(self.N_channel))-3)\
+      \ * self.del_fp\n\n            DDM = np.array([input_items[ch][:chunk_size]\
+      \ for ch in range(self.N_channel)])\n            DDM_abs = np.abs(DDM)\n   \
+      \         DDM_abs[DDM_abs == 0] = np.nan\n            max_idx = np.argmax(DDM_abs)\n\
+      \            peak_magnitude = DDM_abs.flat[max_idx]\n            peak_channel,\
+      \ peak_delay = np.unravel_index(max_idx, DDM_abs.shape)\n            delay =\
+      \ peak_delay / self.sps  # Convert sample index to chip delay\n            doppler\
+      \ = freq_search_list[peak_channel]  # Doppler shift\n            phase = np.angle(DDM[peak_channel][peak_delay])\n\
+      \n            flattened_map = DDM_abs.flatten()\n            avg_signal = np.nanmean(flattened_map[flattened_map\
+      \ != peak_magnitude])  # Exclude the peak\n            std_signal = np.nanstd(flattened_map[flattened_map\
+      \ != peak_magnitude])\n            snr_avg = 10 * np.log10(peak_magnitude /\
+      \ avg_signal)\n            snr_std = (peak_magnitude - avg_signal) / std_signal\n\
+      \            # print(f\"snr_avg = {snr_avg}, snr_std = {snr_std}\")\n      \
+      \      \n            # Check if the peak is valid (SNR > 4 dB)\n           \
+      \ # print(f\"################# PRN = {self.PRN_ref[0]}, Search Loop = {self.search_loopN}\
+      \ ##############\")\n            if self.search_state == 0: \n             \
+      \   \n                if snr_avg > 6 and snr_std > 7:\n                    print(f\"\
+      PRN {self.PRN_ref[0]} Coarse Search Starts\")\n                    # Generate\
+      \ a refined Doppler frequency search list around the detected Doppler\n    \
+      \                self.fdp = doppler\n                    self.del_fp = self.del_fp/3\n\
+      \                    self.search_state = 1 # switch to fine resolution search\
+      \     \n                    self.coarse_search_step = 0 # reset the coarse search\
+      \ counting\n                    print(f\"Coarse Search Found: Delay={delay:.2f}\
+      \ chips, Doppler={doppler:.2f} Hz, SNR={snr_avg:.2f} dB\")\n               \
+      \     print(f\"Coarse Search Phase: {phase/np.pi*180} deg\")       \n      \
+      \              print(f\"PRN {self.PRN_ref[0]} Fine Search Starts\")   \n   \
+      \             else:\n                    self.coarse_search_step += 1\n    \
+      \                if self.coarse_search_step <= len(self.coarse_search_fd)-1:\n\
+      \                        self.fdp = self.coarse_search_fd[self.coarse_search_step]\n\
+      \                        self.del_fp = self.del_f_init\n                   \
+      \ else:\n                        print(f\"PRN {self.PRN_ref[0]} not found\\\
+      n\")\n                        self.coarse_search_step = 0 # reset coarse search\
+      \ counting to 0\n                        self.search_state = 0\n           \
+      \             self.fdp = self.fd_init\n                        self.del_fp =\
+      \ self.del_f_init\n\n                        self.PRN_ref = [x+1 for x in self.PRN_ref]\n\
+      \                        if self.PRN_ref[0] >= 33:\n                       \
+      \     self.mode = 1\n                            mode_msg = pmt.cons(pmt.intern(\"\
+      mode\"), pmt.from_float(self.mode))\n                            self.message_port_pub(pmt.intern('mode_update'),mode_msg)\n\
+      \                            print('Enter Tracking Mode \\n')\n            \
+      \                return 0\n                        else:   \n              \
+      \              PRN_search_pmt = pmt.init_f32vector(self.N_channel, self.PRN_ref)\n\
+      \                            message_PRN_ref = pmt.cons(pmt.intern(\"PRN_ref\"\
+      ), PRN_search_pmt)\n                            self.message_port_pub(pmt.intern('PRN_ref_update'),message_PRN_ref)\n\
+      \n\n            elif self.search_state == 1: # fine resolution fd search\n \
+      \               \n                self.search_loopN += 1\n                self.fdp\
+      \ = doppler\n                self.del_fp = self.del_fp/3\n\n               \
+      \ if self.search_loopN >= self.fine_search_loopN: # each fine search loop iterates\
+      \ N times\n                                                                #\
+      \ Then switch to the next PRN\n                    \n                    print(f\"\
+      Fine Search Found: Delay={delay:.2f} chips, Doppler={doppler:.2f} Hz, SNR={snr_avg:.2f}\
+      \ dB\")\n                    print(f\"find Search Phase: {phase/np.pi*180} deg\\\
+      n\")\n                    # update the PRN search parameters\n             \
+      \       if snr_std > self.PRN_peak_SNR:\n                        self.PRN_peak_SNR\
+      \ = snr_std\n                        self.track_delay = peak_delay\n       \
+      \                 self.track_doppler = doppler\n                        self.track_phase\
+      \ = phase\n                        self.track_PRN = self.PRN_ref[0]\n\n    \
+      \                self.search_state = 0   # reset the coarse search mode\n  \
+      \                  self.fdp = self.fd_init\n                    self.del_fp\
+      \ = self.del_f_init\n                    self.search_loopN = 0    \n       \
+      \             self.PRN_ref = [x+1 for x in self.PRN_ref]\n                 \
+      \   if self.PRN_ref[0] >= 33: # the end of PRN search, switch to tracking mode\
+      \              \n                        self.mode = 1\n                   \
+      \     self.PRN_ref = [1]*7\n                        return 0\n             \
+      \       else: # if it is not the end of the PRN search, feedback the PRN to\
+      \ correlator unit                        \n                        PRN_search_pmt\
+      \ = pmt.init_f32vector(7, self.PRN_ref)\n                        message_PRN_ref\
+      \ = pmt.cons(pmt.intern(\"PRN_ref\"), PRN_search_pmt)\n                    \
+      \    self.message_port_pub(pmt.intern('PRN_ref_update'),message_PRN_ref)\n \
+      \                       \n                                        \n\n     \
+      \       refined_doppler_list = self.fdp + (np.array(range(self.N_channel))-3)\
+      \ * self.del_fp\n            refined_doppler_list = refined_doppler_list.tolist()\n\
+      \n            freq_search_pmt = pmt.init_f32vector(7, refined_doppler_list)\n\
+      \            message4 = pmt.cons(pmt.intern(\"freq_search_list\"), freq_search_pmt)\n\
+      \            self.message_port_pub(pmt.intern('freqlist_update'), message4)\n\
+      \n            message1 = pmt.cons(pmt.intern(\"load_data\"), pmt.from_float(1))\n\
+      \            self.message_port_pub(pmt.intern('request_data'),message1)\n\n\
+      \                \n\n\n            \n            # Consume all input samples\n\
+      \            self.consume_each(chunk_size)\n            return 0\n        \n\
+      \        elif self.mode == 1: # tracking mode\n            # write the tracking\
+      \ lock loops here\n            if len(input_items[0]) < chunk_size:\n      \
+      \          return 0\n            doppler_search = self.track_doppler+ (np.array(range(self.N_channel))-3)\
+      \ * self.track_del_doppler\n            if self.track_loopN == 0: # first tracking\
+      \ loop\n                if self.track_PRN != 0:\n                    # update\
+      \ Local PRN\n                    \n                    track_PRN = [self.track_PRN]*7\
+      \    \n            \n                    PRN_search_pmt = pmt.init_f32vector(7,\
+      \ track_PRN)\n                    message_PRN_ref = pmt.cons(pmt.intern(\"PRN_ref\"\
+      ), PRN_search_pmt)\n                    self.message_port_pub(pmt.intern('PRN_ref_update'),message_PRN_ref)\n\
+      \                    # update LO freq\n                    freq_search_pmt =\
+      \ pmt.init_f32vector(7, doppler_search)\n                    message4 = pmt.cons(pmt.intern(\"\
+      freq_search_list\"), freq_search_pmt)\n                    self.message_port_pub(pmt.intern('freqlist_update'),\
+      \ message4)\n\n                    self.track_loopN += 1\n                #\
+      \ else: # restart the searching\n                #     self.mode = 0\n     \
+      \           #     mode_msg = pmt.cons(pmt.intern(\"mode\"), pmt.from_float(self.mode))\n\
+      \                #     self.message_port_pub(pmt.intern('mode_update'),mode_msg)\n\
+      \                #     self.fdp = self.fd_init\n                #     self.del_fp\
+      \ = self.del_f_init\n            else: # start with the 2nd loop of tracking\n\
+      \                DDM = np.array([input_items[ch][:chunk_size] for ch in range(self.N_channel)])\n\
+      \                DDM_abs = np.abs(DDM)\n                DDM_abs[DDM_abs == 0]\
+      \ = np.nan\n                max_idx = np.argmax(DDM_abs)\n                peak_magnitude\
+      \ = DDM_abs.flat[max_idx]\n                peak_channel, peak_delay = np.unravel_index(max_idx,\
+      \ DDM_abs.shape)\n                delay = peak_delay / self.sps  # Convert sample\
+      \ index to chip delay\n                doppler = doppler_search[peak_channel]\
+      \  # Doppler shift\n                phase = np.angle(DDM[peak_channel][peak_delay])\n\
+      \n                flattened_map = DDM_abs.flatten()\n                avg_signal\
+      \ = np.nanmean(flattened_map[flattened_map != peak_magnitude])  # Exclude the\
+      \ peak\n                std_signal = np.nanstd(flattened_map[flattened_map !=\
+      \ peak_magnitude])\n                snr_avg = 10 * np.log10(peak_magnitude /\
+      \ avg_signal)\n                snr_std = (peak_magnitude - avg_signal) / std_signal\n\
+      \n                # update tracking central dopp and delta_dopp\n          \
+      \      doppler_search_new = self.track_doppler+ (np.array(range(self.N_channel))-3)\
+      \ * self.track_del_doppler\n            \n                freq_search_pmt =\
+      \ pmt.init_f32vector(7, doppler_search_new)\n                message4 = pmt.cons(pmt.intern(\"\
+      freq_search_list\"), freq_search_pmt)\n                self.message_port_pub(pmt.intern('freqlist_update'),\
+      \ message4)\n\n                self.track_loopN += 1\n\n            self.consume_each(len(input_items[0]))\n\
+      \            return 0\n        \n\n        \n        \n        \n        # #\
+      \ # update doppler searching range\n        # if self.search_loopN == 2:\n \
+      \           \n        #     self.search_loopN = 0 # end search, and shift to\
+      \ next PRN\n        #     self.fdp = self.fd_init # initialize dopp search range\n\
+      \        #     self.del_fp = self.del_f_init\n        #     self.flag = 1 #\
+      \ end search (later change it to end after 32 PRN are all searched)\n      \
+      \  #     message3 = pmt.cons(pmt.intern(\"load_data\"), pmt.from_float(0))\n\
+      \        #     self.message_port_pub(pmt.intern('request_data'),message3)\n\
+      \        # else:\n        #     self.search_loopN += 1\n        #     self.fdp\
+      \ = -1300 #freq_search_max\n        #     self.del_fp = 100\n        #     message3\
+      \ = pmt.cons(pmt.intern(\"load_data\"), pmt.from_float(1))\n        #     self.message_port_pub(pmt.intern('request_data'),message3)\n\
+      \n        #     freq_search_list = self.fdp + (np.array(range(num_channels))-3)\
+      \ * self.del_fp\n        #     freq_search_pmt = pmt.init_f32vector(7, freq_search_list)\n\
+      \        #     message4 = pmt.cons(pmt.intern(\"freqlist_update\"), freq_search_pmt)\n\
+      \        #     self.message_port_pub(pmt.intern('freqlist_update'), message4)\n\
+      \n        return 0\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    fine_search_loopN: '6'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: sps
+  states:
+    _io_cache: ('Central_Processor', 'blk', [('sps', '4'), ('fine_search_loopN', '6')],
+      [('0', 'complex', 1), ('1', 'complex', 1), ('2', 'complex', 1), ('3', 'complex',
+      1), ('4', 'complex', 1), ('5', 'complex', 1), ('6', 'complex', 1)], [('mode_update',
+      'message', 1), ('PRN_ref_update', 'message', 1), ('freqlist_update', 'message',
+      1), ('request_data', 'message', 1)], 'Embedded Python Block example - a simple
+      multiply const', ['fine_search_loopN', 'sps'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1364.0, 1544]
+    rotation: 270
+    state: enabled
+- name: epy_block_3
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport copy\nimport\
+      \ pmt\n\nclass blk(gr.basic_block):\n    def __init__(self, sps=4,fine_search_loopN\
+      \ = 6):\n        gr.basic_block.__init__(\n            self,\n            name=\"\
+      Clip and Process Vector\",  # Block name\n            in_sig=[np.complex64],\
+      \           # Streaming input\n            out_sig=[(np.complex64, sps * 1023),\n\
+      \                     (np.complex64, sps * 1023),\n                     (np.complex64,\
+      \ sps * 1023),\n                     (np.complex64, sps * 1023),\n         \
+      \            (np.complex64, sps * 1023),\n                     (np.complex64,\
+      \ sps * 1023),\n                     (np.complex64, sps * 1023),\n         \
+      \            (np.float32, sps*1023),\n                     (np.float32, sps*1023),\n\
+      \                     (np.float32, sps*1023),\n                     (np.float32,\
+      \ sps*1023),\n                     (np.float32, sps*1023),\n               \
+      \      (np.float32, sps*1023),\n                     (np.float32, sps*1023)\n\
+      \                     ]  # Output fixed-size vector\n        )\n        self.sps\
+      \ = sps\n        self.chunk_size = sps * 1023  # Fixed vector size\n       \
+      \ self.fine_search_loopN = fine_search_loopN\n        self.state = 0\n     \
+      \   self.num_channels = 7\n        self.Nloop = 0\n        self.PRN_ref = [1]*self.num_channels\n\
+      \        self.mode = 0 # 0: cold start # 1: tracking mode\n        self.reg\
+      \ = [0+0j]*self.chunk_size\n        self.PRN_local = [[0] * self.chunk_size\
+      \ for _ in range(self.num_channels)]\n        self.freq_search_list = [-1500,-1000,-500,0,500,1000,1500]\n\
+      \        self.load_data = 0\n        self.fs = self.sps*1.023e6\n        self.track_loopN\
+      \ = 0\n        \n\n        self.message_port_register_in(pmt.intern(\"request_data\"\
+      ))\n        self.set_msg_handler(pmt.intern(\"request_data\"), self.handle_request_data)\n\
+      \        self.message_port_register_in(pmt.intern(\"mode_update\"))\n      \
+      \  self.set_msg_handler(pmt.intern(\"mode_update\"), self.handle_mode_update)\n\
+      \        self.message_port_register_in(pmt.intern(\"freqlist_update\"))\n  \
+      \      self.set_msg_handler(pmt.intern(\"freqlist_update\"), self.handle_freqlist_update)\n\
+      \        self.message_port_register_in(pmt.intern(\"PRN_ref_update\"))\n   \
+      \     self.set_msg_handler(pmt.intern(\"PRN_ref_update\"), self.handle_PRN_ref_update)\n\
+      \        \n    def generate_prn_code(self,sv):\n        \"\"\"Generate GPS Satellite\
+      \ PRN Code (C/A Code)\n        \n        :param int sv: satellite code (1-32)\n\
+      \        :returns list: PRN code for chosen satellite\n        \"\"\"\n    \
+      \    SV = {\n            1: [2,6], 2: [3,7], 3: [4,8], 4: [5,9], 5: [1,9], \n\
+      \            6: [2,10], 7: [1,8], 8: [2,9], 9: [3,10], 10: [2,3],\n        \
+      \    11: [3,4], 12: [5,6], 13: [6,7], 14: [7,8], 15: [8,9],\n            16:\
+      \ [9,10], 17: [1,4], 18: [2,5], 19: [3,6], 20: [4,7],\n            21: [5,8],\
+      \ 22: [6,9], 23: [1,3], 24: [4,6], 25: [5,7],\n            26: [6,8], 27: [7,9],\
+      \ 28: [8,10], 29: [1,6], 30: [2,7],\n            31: [3,8], 32: [4,9]\n    \
+      \    }\n\n        def shift(register, feedback, output):\n            \"\"\"\
+      Perform shift register operation\"\"\"\n            out = [register[i-1] for\
+      \ i in output]\n            out = sum(out) % 2 if len(out) > 1 else out[0]\n\
+      \            fb = sum(register[i-1] for i in feedback) % 2\n            register[1:]\
+      \ = register[:-1]\n            register[0] = fb\n            return out\n\n\
+      \        G1 = [1] * 10\n        G2 = [1] * 10\n        ca = []\n\n        for\
+      \ _ in range(1023):\n            g1 = shift(G1, [3,10], [10])\n            g2\
+      \ = shift(G2, [2,3,6,8,9,10], SV[sv])\n            ca.append((g1 + g2) % 2)\n\
+      \n        ca = np.array(ca,dtype = np.float32)\n        return ca\n    \n  \
+      \  def handle_request_data(self, msg):\n        # Check if the message is a\
+      \ PMT pair\n        if pmt.is_pair(msg):\n            key = pmt.car(msg)  #\
+      \ Extract the key\n            value = pmt.cdr(msg)  # Extract the value\n\n\
+      \            # Check the key and process the value\n            if pmt.symbol_to_string(key)\
+      \ == \"load_data\" and pmt.is_number(value):\n                self.load_data\
+      \ = pmt.to_double(value)  # Convert to Python float\n                # print(f\"\
+      Received load_data: {self.load_data}\")\n            else:\n               \
+      \ self.load_data = 0\n        else:\n            self.load_data = 0\n\n    def\
+      \ handle_mode_update(self, msg):\n        # Check if the message is a PMT pair\n\
+      \        if pmt.is_pair(msg):\n            key = pmt.car(msg)  # Extract the\
+      \ key\n            value = pmt.cdr(msg)  # Extract the value\n\n           \
+      \ # Check the key and process the value\n            if pmt.symbol_to_string(key)\
+      \ == \"mode\" and pmt.is_number(value):\n                self.mode = pmt.to_double(value)\
+      \  # Convert to Python float\n                #print(\"tracking mode starts\"\
+      )\n            else:\n                self.mode= 0\n        else:\n        \
+      \    self.mode = 0\n\n    def handle_freqlist_update(self, msg):\n        #\
+      \ Process the \"freqlist_update\" message\n        if pmt.is_pair(msg):\n  \
+      \          key = pmt.car(msg)\n            value = pmt.cdr(msg)\n\n        \
+      \    if pmt.symbol_to_string(key) == \"freq_search_list\" and pmt.is_f32vector(value):\n\
+      \                self.freq_search_list = np.array(pmt.f32vector_elements(value))\n\
+      \            else:\n                print(\"Invalid key or value in the freqlist_update\
+      \ message\")\n        else:\n            print(\"Message on freqlist_update\
+      \ is not a PMT pair\")\n\n    def handle_PRN_ref_update(self, msg):\n      \
+      \  # Check if the message is a PMT pair\n        # Process the \"freqlist_update\"\
+      \ message\n        if pmt.is_pair(msg):\n            key = pmt.car(msg)\n  \
+      \          value = pmt.cdr(msg)\n\n            if pmt.symbol_to_string(key)\
+      \ == \"PRN_ref\" and pmt.is_f32vector(value):\n                self.PRN_ref\
+      \ = np.array(pmt.f32vector_elements(value))\n                # print(f\"updated\
+      \ PRN ref = {self.PRN_ref[0]}\")\n                for ii in range(self.num_channels):\n\
+      \                    PRN_local = self.generate_prn_code(self.PRN_ref[ii])\n\
+      \                    PRN_local = 2*PRN_local - 1\n                    PRN_local\
+      \ = np.repeat(PRN_local, self.sps)\n                    self.PRN_local[ii][:]\
+      \ = PRN_local\n                # print('local PRN updated')\n            else:\n\
+      \                print(\"Invalid key or value in the PRN_ref_update message\"\
+      )\n        else:\n            print(\"Message on freqlist_update is not a PMT\
+      \ pair\")\n\n    def general_work(self, input_items, output_items):\n      \
+      \  # Just for simulation test\n        if self.Nloop <= 10:\n            if\
+      \ len(input_items[0]) < self.chunk_size: # wait for enough data to load\n  \
+      \              return 0\n            else:\n                self.consume(0,self.chunk_size)\n\
+      \                self.Nloop += 1\n                print(self.Nloop)\n      \
+      \          return 0\n        # end\n\n        \n        if self.mode == 0: #\
+      \ Cold start mode\n            if self.state == 1:  # register mode (or sleeping\
+      \ mode)\n                if self.load_data == 0:\n                    self.consume(0,len(input_items[0]))\n\
+      \                    return 0\n                elif self.load_data == 1: # the\
+      \ processor requests data\n                    # print(f\"Received frequency\
+      \ list: {freq_search_list}\")\n                    for ii in range(self.num_channels):\n\
+      \                        freq_shift = np.exp(-1j * 2 * np.pi * self.freq_search_list[ii]\
+      \ * np.arange(1023*4) / (self.fs))\n                        output_items[ii][0,:]\
+      \ = self.reg * freq_shift\n                        output_items[self.num_channels+ii][0,:]\
+      \ = self.PRN_local[ii][:]\n                    self.load_data = 0\n        \
+      \            return 1\n            \n            elif self.state == 0: # cold\
+      \ start first loop, save data into register\n                if len(input_items[0])\
+      \ < self.chunk_size: # wait for enough data to load\n                    return\
+      \ 0\n                # once get enough data, store one chunck (4*1023 samples)\
+      \ into the register\n                # Clip the first `sps * 1023` samples\n\
+      \                # only for the first run\n                # print('first loop,\
+      \ PRN ref = ',self.PRN_ref[0])\n                clipped_data = input_items[0][:self.chunk_size]\n\
+      \                self.reg = copy.deepcopy(clipped_data)\n                PRN_local\
+      \ = self.generate_prn_code(self.PRN_ref[0])\n                PRN_local = 2*PRN_local\
+      \ - 1\n                PRN_local = np.repeat(PRN_local, self.sps)\n        \
+      \        \n                # load freq LO vector to the register\n         \
+      \       for ii in range(self.num_channels):\n                    self.PRN_local[ii][:]\
+      \ = PRN_local\n                    freq_shift = np.exp(-1j * 2 * np.pi * self.freq_search_list[ii]\
+      \ * np.arange(1023*self.sps) / self.fs)\n                    output_items[ii][0,:]\
+      \ = self.reg * freq_shift\n                    output_items[self.num_channels+ii][0,:]\
+      \ = self.PRN_local[ii]\n                # print('registers loaded')\n\n    \
+      \            self.consume(0, self.chunk_size)\n                self.state =\
+      \ 1\n\n                return 1\n\n        elif self.mode == 1:\n          \
+      \  # print(\"Traking Mode\")\n            if len(input_items[0]) < self.chunk_size:\
+      \ # wait for one code length data to load\n                return 0\n      \
+      \      else:\n                if self.track_loopN == 0:\n                  \
+      \  print(f'Tracking starts, lock on PRN {self.PRN_ref[0]},central dopp={self.freq_search_list[3]},dopp\
+      \ re={self.freq_search_list[3]-self.freq_search_list[2]}')\n               \
+      \ clipped_data = input_items[0][:self.chunk_size]\n                for ii in\
+      \ range(self.num_channels):\n                    freq_shift = np.exp(-1j * 2\
+      \ * np.pi * self.freq_search_list[ii] * np.arange(1023*self.sps) / self.fs)\n\
+      \                    output_items[ii][0,:] = clipped_data* freq_shift\n    \
+      \                output_items[self.num_channels+ii][0,:] = self.PRN_local[ii][:]\n\
+      \                self.consume(0, self.chunk_size)\n                self.track_loopN\
+      \ += 1\n                if self.track_loopN % 1000 == 0:\n                 \
+      \   print(f\"Time Passed {self.track_loopN/1000} sec\")\n                return\
+      \ 1\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    fine_search_loopN: '6'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: sps
+  states:
+    _io_cache: ('Clip and Process Vector', 'blk', [('sps', '4'), ('fine_search_loopN',
+      '6')], [('0', 'complex', 1), ('mode_update', 'message', 1), ('PRN_ref_update',
+      'message', 1), ('freqlist_update', 'message', 1), ('request_data', 'message',
+      1)], [('0', 'complex', 4092), ('1', 'complex', 4092), ('2', 'complex', 4092),
+      ('3', 'complex', 4092), ('4', 'complex', 4092), ('5', 'complex', 4092), ('6',
+      'complex', 4092), ('7', 'float', 4092), ('8', 'float', 4092), ('9', 'float',
+      4092), ('10', 'float', 4092), ('11', 'float', 4092), ('12', 'float', 4092),
+      ('13', 'float', 4092)], '', ['fine_search_loopN', 'sps'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [420.0, 1520]
+    rotation: 90
+    state: enabled
+- name: fft_corr_0
+  id: fft_corr
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 868.0]
+    rotation: 0
+    state: enabled
+- name: fft_corr_0_0
+  id: fft_corr
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 948.0]
+    rotation: 0
+    state: enabled
+- name: fft_corr_0_0_0
+  id: fft_corr
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 1028.0]
+    rotation: 0
+    state: enabled
+- name: fft_corr_0_0_1
+  id: fft_corr
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 1124.0]
+    rotation: 0
+    state: enabled
+- name: fft_corr_0_0_2
+  id: fft_corr
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 1204.0]
+    rotation: 0
+    state: enabled
+- name: fft_corr_0_0_3
+  id: fft_corr
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 1284.0]
+    rotation: 0
+    state: enabled
+- name: fft_corr_0_0_4
+  id: fft_corr
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    sps: '4'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1224, 1364.0]
+    rotation: 0
+    state: enabled
+- name: import_3
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: import numpy as np
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [792, 84.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_freq_sink_x_0_1
+  id: qtgui_freq_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    average: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    ctrlpanel: 'True'
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: tab@2
+    label: Relative Gain
+    label1: after filtering
+    label10: ''''''
+    label2: before filtering
+    label3: ''''''
+    label4: ''''''
+    label5: ''''''
+    label6: ''''''
+    label7: ''''''
+    label8: ''''''
+    label9: ''''''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    norm_window: 'False'
+    showports: 'False'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_tag: '""'
+    type: complex
+    units: dB
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    wintype: window.WIN_BLACKMAN_hARRIS
+    ymax: '-20'
+    ymin: '-60'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1504, 572.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_time_sink_x_1
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'True'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'True'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: tab@2
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '""'
+    nconnections: '1'
+    size: 1023*4*5-1
+    srate: samp_rate
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2792, 748.0]
+    rotation: 0
+    state: disabled
+- name: tab
+  id: qtgui_tab_widget
+  parameters:
+    alias: ''
+    comment: ''
+    gui_hint: ''
+    label0: IF band
+    label1: baseband
+    label10: Tab 10
+    label11: Tab 11
+    label12: Tab 12
+    label13: Tab 13
+    label14: Tab 14
+    label15: Tab 15
+    label16: Tab 16
+    label17: Tab 17
+    label18: Tab 18
+    label19: Tab 19
+    label2: Tab 2
+    label3: Tab 3
+    label4: Tab 4
+    label5: Tab 5
+    label6: Tab 6
+    label7: Tab 7
+    label8: Tab 8
+    label9: Tab 9
+    num_tabs: '3'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [936, 36.0]
+    rotation: 0
+    state: enabled
+- name: virtual_sink_0
+  id: virtual_sink
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: Ch2Rx
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1528, 476.0]
+    rotation: 0
+    state: enabled
+- name: virtual_source_2_0
+  id: virtual_source
+  parameters:
+    alias: ''
+    comment: ''
+    stream_id: Ch2Rx
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [224, 1836.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [blocks_complex_to_mag_1, '0', qtgui_time_sink_x_1, '0']
+- [blocks_file_source_0, '0', qtgui_freq_sink_x_0_1, '0']
+- [blocks_file_source_0, '0', virtual_sink_0, '0']
+- [blocks_vector_to_stream_1, '0', fft_corr_0, '0']
+- [blocks_vector_to_stream_1_0, '0', fft_corr_0_0, '0']
+- [blocks_vector_to_stream_1_0_0, '0', fft_corr_0_0_1, '0']
+- [blocks_vector_to_stream_1_0_1, '0', fft_corr_0_0_3, '0']
+- [blocks_vector_to_stream_1_0_1_0, '0', fft_corr_0_0_4, '0']
+- [blocks_vector_to_stream_1_1, '0', fft_corr_0_0_0, '0']
+- [blocks_vector_to_stream_1_2, '0', fft_corr_0_0_2, '0']
+- [blocks_vector_to_stream_2, '0', fft_corr_0, '1']
+- [blocks_vector_to_stream_2_0, '0', fft_corr_0_0, '1']
+- [blocks_vector_to_stream_2_0_0, '0', fft_corr_0_0_2, '1']
+- [blocks_vector_to_stream_2_1, '0', fft_corr_0_0_0, '1']
+- [blocks_vector_to_stream_2_1_0, '0', fft_corr_0_0_3, '1']
+- [blocks_vector_to_stream_2_1_0_0, '0', fft_corr_0_0_4, '1']
+- [blocks_vector_to_stream_2_2, '0', fft_corr_0_0_1, '1']
+- [epy_block_1, PRN_ref_update, epy_block_3, PRN_ref_update]
+- [epy_block_1, freqlist_update, epy_block_3, freqlist_update]
+- [epy_block_1, mode_update, epy_block_3, mode_update]
+- [epy_block_1, request_data, epy_block_3, request_data]
+- [epy_block_3, '0', blocks_vector_to_stream_1, '0']
+- [epy_block_3, '1', blocks_vector_to_stream_1_0, '0']
+- [epy_block_3, '10', blocks_vector_to_stream_2_2, '0']
+- [epy_block_3, '11', blocks_vector_to_stream_2_0_0, '0']
+- [epy_block_3, '12', blocks_vector_to_stream_2_1_0, '0']
+- [epy_block_3, '13', blocks_vector_to_stream_2_1_0_0, '0']
+- [epy_block_3, '2', blocks_vector_to_stream_1_1, '0']
+- [epy_block_3, '3', blocks_vector_to_stream_1_0_0, '0']
+- [epy_block_3, '4', blocks_vector_to_stream_1_2, '0']
+- [epy_block_3, '5', blocks_vector_to_stream_1_0_1, '0']
+- [epy_block_3, '6', blocks_vector_to_stream_1_0_1_0, '0']
+- [epy_block_3, '7', blocks_vector_to_stream_2, '0']
+- [epy_block_3, '8', blocks_vector_to_stream_2_0, '0']
+- [epy_block_3, '9', blocks_vector_to_stream_2_1, '0']
+- [fft_corr_0, '0', epy_block_1, '0']
+- [fft_corr_0_0, '0', epy_block_1, '1']
+- [fft_corr_0_0_0, '0', epy_block_1, '2']
+- [fft_corr_0_0_1, '0', epy_block_1, '3']
+- [fft_corr_0_0_2, '0', epy_block_1, '4']
+- [fft_corr_0_0_3, '0', epy_block_1, '5']
+- [fft_corr_0_0_4, '0', epy_block_1, '6']
+- [virtual_source_2_0, '0', epy_block_3, '0']
+
+metadata:
+  file_format: 1
+  grc_version: 3.10.10.0
